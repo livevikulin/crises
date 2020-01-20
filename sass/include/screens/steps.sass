@@ -1,0 +1,86 @@
+.steps
+    position: relative
+    padding: 360px 0 310px 0
+    background-image: url(/img/screen-3/steps-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        display: block
+        height: 90%
+        width: 650px
+        background-repeat: no-repeat
+        background-position-y: bottom
+        z-index: 1
+    &:before 
+        left: calc((100% - 1170px) / 2 - 250px)
+        bottom: 30px
+        background-image: url(/../img/screen-3/video-woman.png)
+        background-position-x: left
+    &:after 
+        right: calc((100% - 1170px) / 2 - 170px)
+        bottom: 55px
+        background-image: url(/../img/screen-3/video-man.png)
+        background-position-x: right
+
+    &__cloud
+        position: absolute
+        top: -85px
+        left: 50%
+        max-width: 860px
+        font-weight: 600
+        line-height: 1.2
+        transform: translateX(-50%)
+        span 
+            display: block
+        .text_red 
+            margin-bottom: 20px
+            font-family: "TT Limes Slab"
+            font-size: 49px
+            font-weight: 700
+    &-cloud
+        &__large
+            font-family: "TT Limes Slab"
+            font-size: 49px
+            font-weight: 400
+    .text-cloud
+        &:before 
+            content: url(/img/screen-1/face-good.png)
+    &-video
+        position: relative
+        max-width: 860px
+        margin: auto
+        padding: 145px 110px 140px 110px
+        border-radius: 35px
+        background-color: #ffffff
+        background-image: url(/img/screen-3/video-bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+        text-align: right
+        color: #070709
+        font-size: 33px
+        font-weight: 600
+        &__play
+            width: fit-content
+            margin: auto
+            margin-bottom: 20px
+            img 
+                transition: 0.3s
+                cursor: pointer
+            &:hover
+                img 
+                    transform: scale(1.05)
+
+        &__text 
+            position: relative
+            width: fit-content
+            margin: auto
+            z-index: 5
+        span 
+            display: block
+        &__time 
+            color: #b3a7a8
+            font-size: 23px
+

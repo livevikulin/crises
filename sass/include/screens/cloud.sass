@@ -1,0 +1,207 @@
+.cloud-bg
+    background-image: url(../img/screen-1/background.jpg)
+    background-size: cover
+    background-position: bottom center
+    padding-bottom: 55px
+.crisis 
+    margin-bottom: 40px
+    padding: 85px 0 20px 0
+    font-family: 'TT Limes Slab'
+    line-height: 1.2
+    text-align: center
+    &__heart
+        position: relative
+        display: inline-block
+        margin-top: 40px
+    &__text
+        margin-top: 15px
+        font-family: 'Proxima Nova'
+    &-text
+        margin-bottom: 40px
+        &__large
+            position: relative
+            display: inline-block
+            margin-bottom: 30px
+            font-family: 'TT Limes Slab'
+            font-size: 75px
+            line-height: 1
+            &:before
+                content: '...' 
+                position: absolute
+                left: 100%
+                display: block             
+        &__small 
+            font-size: 20px
+            line-height: 1.3
+            .text_upp 
+                font-size: 29px
+                font-weight: 700
+
+.heart
+    &__text
+        position: absolute 
+        display: flex
+        align-items: baseline
+        text-align: left
+        color: #938887
+        font-size: 44px
+        &_left
+            top: 0
+            right: calc(100% + 50px)
+            font-size: 53px
+            transform: rotate(-10deg)
+        &_right
+            top: 30%
+            left: calc(100% + 40px)
+            width: fit-content
+            font-size: 56px
+            transform: rotate(5deg)
+        &_bottom
+            position: relative
+            margin-top: 36px
+            margin-left: -20px
+        &-circle
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-shrink: 0
+            width: 40px
+            height: 40px
+            margin-right: 28px
+            border-radius: 50%
+            border: 1px solid #fff
+            &:before
+                content: ''
+                display: block
+                width: 26px
+                height: 26px
+                border-radius: 50%
+                background-color: #fff
+                box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.14)
+    &-image
+        &__img
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -18%
+                left: -130px
+                display: block
+                width: 140%
+                height: 140%
+                background-image: url('/img/screen-1/heart-shadow.png')
+                background-size: 100%
+                background-repeat: no-repeat
+                z-index: 0
+            img 
+                position: relative
+                z-index: 0
+        &__text
+            position: absolute
+            top: 0
+            left: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 80%
+            color: #fff
+            font-size: 49px
+            transform: rotate(-10deg)
+            &_left
+                position: absolute
+                right: calc(50% + 15px)
+                white-space: nowrap
+            &_right
+                position: absolute
+                left: calc(50% + 40px)
+            
+.problems
+    position: relative
+    padding: 65px 0 132px 0 
+    text-align: center
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        bottom: 30px
+        display: block
+        height: 90%
+        width: 100%
+        background-repeat: no-repeat
+        background-position-y: bottom
+        z-index: 1
+    &:before
+        left: -60px
+        background-image: url(/../img/screen-1/problems-woman.png)
+        background-position-x: left
+    &:after
+        right: 0
+        background-image: url(/../img/screen-1/problems-man.png)
+        background-position-x: right
+    &__cloud
+        max-width: 780px
+        padding: 67px 70px
+        font-size: 28px
+        font-weight: 600
+        &:before
+            content: url('../img/screen-1/face-sad.png')
+    &__text
+        &_grey
+            color: #b3a7a8
+        &_large
+            font-family: "TT Limes Slab"
+            font-size: 54px
+            font-weight: 400
+    .text_red
+        font-size: 39px
+    &__list
+        text-align: center
+        color: #ffffff
+        font-family: "TT Limes Slab"
+        &_one
+            font-size: 58px
+            transform: rotate(2deg)
+            span
+                padding-left: 20px
+        &_two
+            font-size: 47px
+            transform: rotate(5deg)
+            .problems__list-arrow
+                padding-right: 60px
+        &_three
+            font-size: 57px
+            transform: rotate(-5deg)
+            span
+                padding-right: 20px
+            .problems__list-arrow
+                padding-right: 20px
+        &_four
+            font-size: 52px
+            transform: rotate(2deg)
+            span
+                padding-left: 10px
+            .problems__list-arrow
+                padding-right: 20px
+        &-arrow
+            line-height: 1
+    &__result
+        display: inline-block
+        max-width: 440px
+        margin-top: 15px
+        padding: 20px 50px
+        background-image: url('../img/screen-1/problems-result-bg.png')
+        background-size: contain
+        background-repeat: no-repeat
+        text-align: center
+        font-size: 27px
+        font-weight: 600
+        line-height: 1.3
+        img 
+            margin-right: 20px
+    &-result
+        &__wrap
+            display: flex
+            align-items: center
+
