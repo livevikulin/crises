@@ -40,9 +40,6 @@ $( document ).ready(function() {
         }, 400);
         return false;
     });
-
-
-
     
     if (document.body.clientWidth > 1024) {
 	
@@ -60,7 +57,9 @@ $( document ).ready(function() {
 		
 		document.addEventListener('mousemove', parallax);
 
-	};
+    };
+    
+    new WOW().init();
     
 
 });

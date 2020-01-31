@@ -596,6 +596,52 @@ a {
       border-radius: 50%;
       background-color: #fff;
       box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.14); }
+      .heart__text-inner {
+        background-color: #938887;
+        color: transparent;
+        text-shadow: 0px 0px 0px rgba(255,255,255,0);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+      }
+      .heart__text_left:hover .heart__text-inner,
+      .heart__text_right:hover .heart__text-inner {
+        background-color: #94271d;
+        text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+        cursor: default;
+      }
+      .heart__text_bottom:hover .heart__text-inner {
+        background-color: #f75352;
+        text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+        cursor: default;        
+      }
+      .heart__text-circle,
+      .heart__text-circle:before {
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;        
+      }
+      .heart__text_left:hover .heart__text-circle,
+      .heart__text_right:hover .heart__text-circle {
+        border: 1px solid #b76e67;
+      }
+      .heart__text_left:hover .heart__text-circle:before,
+      .heart__text_right:hover .heart__text-circle:before {
+        background-color: #b76e67;
+      }
+      .heart__text_bottom:hover .heart__text-circle {
+        border: 1px solid #ff8d8d;
+      }
+      .heart__text_bottom:hover .heart__text-circle:before {
+        background-color: #ff8d8d;
+      }
 
 .heart-image__img {
   position: relative; }
@@ -676,6 +722,9 @@ a {
     text-align: center;
     color: #ffffff;
     font-family: "TT Limes Slab"; }
+    .problems__list span {
+      display: block;
+    }
     .problems__list_one {
       font-size: 58px;
       transform: rotate(2deg); }
@@ -773,7 +822,20 @@ a {
   .need-item:nth-child(1) .need-item__description {
     max-width: 295px; }
   .need-item__image {
-    text-align: center; }
+    text-align: center;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+    .need__item:hover .need-item__image {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+}
   .need-item__title {
     font-family: "TT Limes Slab";
     font-size: 47px; }
@@ -978,8 +1040,8 @@ a {
     bottom: 0;
     right: 15%;
     width: 470px;
-    height: 750px;
-    background-image: url("../img/screen-5/about-1.png");
+    height: 747px;
+    background-image: url("../img/screen-5/about-1-1.png");
     background-repeat: no-repeat;
     background-size: cover; }
   .about__cloud {
@@ -1013,7 +1075,7 @@ a {
       .about__list li:before {
         content: '';
         position: absolute;
-        top: 12px;
+        top: 10px;
         left: 0;
         width: 8px;
         height: 8px;
@@ -1097,22 +1159,51 @@ a {
     justify-content: space-between; }
   .course__heart {
     position: relative;
-    padding-top: 50px;
-    background-image: url("../img/screen-6/course-heart.png");
-    background-position: center 50px;
-    background-repeat: no-repeat;
-    background-size: 100%; }
-  .course .heart__content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 650px;
-    height: 530px;
+  }
+  .course__heart-image {
+    position: relative;
+  }
+  .course__heart img {
+    width: 100%;
+    max-width: 500px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+  .course__heart .heart_off {
+    opacity: 1;
+  }
+  .course__heart .heart_on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .course .heart__content {
+    margin-top: 20px;
     color: #fafafa;
     text-align: center;
     font-family: "TT Limes Slab";
-    font-size: 66px;
-    line-height: 1; }
+    font-size: 60px;
+    line-height: 1;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  .course__heart:hover .heart_on  {
+    opacity: 1;
+  }
+  .course__heart:hover .heart__content {
+    text-shadow: 1px 1px 3px white, 0 0 1em #f46351
+  }
 
 .form {
   position: relative;
@@ -1379,19 +1470,21 @@ a {
   .about {
     font-size: 20px; }
     .about:before {
-      right: 5%;
+      right: calc((100% - 1170px) / 2);
       width: 420px;
-      height: 670px; }
+      height: 667px; }
     .about__cloud {
       font-size: 36px; }
+      .about__list li:before {
+        top: 6px; }
   .sertificate__item:before {
     height: 144px; }
+  .course__anchor {
+    top: -45px; }
   .course__title {
     font-size: 48px; }
   .course .heart__content {
-    width: 500px;
-    height: 410px;
-    font-size: 56px; }
+    font-size: 52px; }
   .form__title {
     margin-bottom: 30px; }
   .form__inputs {
@@ -1454,7 +1547,10 @@ a {
     .heart__text_bottom {
       margin-left: 10px; }
   .problems:before, .problems:after {
-    display: none; }
+    height: 70%;
+    background-size: contain; }
+  .problems:before {
+    left: -40px; }
   .problems__cloud {
     font-size: 20px;
     line-height: 1.3; }
@@ -1488,8 +1584,11 @@ a {
     font-size: 40px; }
   .steps {
     padding: 320px 0 150px 0; }
-    .steps:before, .steps:after {
-      display: none; }
+    .steps:before {
+      left: calc((100% - 920px) / 2 - 40px) }
+    .steps:after {
+      right: calc((100% - 920px) / 2 - 40px);
+      bottom: 30px; }
   .program {
     padding: 110px 0 155px 0;
     font-size: 20px; }
@@ -1504,9 +1603,16 @@ a {
       .program__subtitle_large {
         font-size: 40px; }
     .program__lessons {
-      max-width: 100%; }
+      max-width: 600px; }
   .lesson:before {
-    display: none; }
+    height: 100%;
+    left: 105%; }
+  .lesson:nth-child(1):before {
+      width: 340px; }
+  .lesson:nth-child(4):before {
+    width: 250px;
+    height: 100%;
+    background-position: 0px -200px; }
   .about {
     background-position: bottom;
     font-size: 18px; }
@@ -1515,14 +1621,12 @@ a {
     .about:before {
       right: 20px;
       width: 300px;
-      height: 480px; }
+      height: 477px; }
   .sertificate__item:before {
     height: 110px; }
   .course__title {
     font-size: 42px; }
   .course .heart__content {
-    width: 400px;
-    height: 330px;
     font-size: 46px; }
   .modal.open {
     display: none;
@@ -1594,6 +1698,10 @@ a {
       display: none; }
   .problems {
     padding: 45px 0 45px 0; }
+    .problems:before {
+      left: 0px; }
+    .problems:after {
+      right: 30px; }  
     .problems__cloud {
       margin-bottom: 40px;
       font-size: 15px; }
@@ -1640,6 +1748,11 @@ a {
         font-size: 15px; }
   .steps {
     padding: 210px 0 70px 0; }
+    .steps:before {
+      left: calc((100% - 700px) / 2 - 20px) }
+    .steps:after {
+      right: calc((100% - 700px) / 2 - 20px);
+      bottom: 30px; }
     .steps__cloud {
       top: -23px;
       width: 90%;
@@ -1684,10 +1797,14 @@ a {
       .program__subtitle_large {
         font-size: 31px; }
     .program__lessons {
-      max-width: 500px;
-      margin: auto; }
+      max-width: 450px;
+    margin-left: 30px; }
   .lesson {
     margin-bottom: 50px; }
+    .lesson:nth-child(4):before {
+      width: 180px;
+      height: 110%;
+      background-position: 0px -150px; }
     .lesson__name {
       margin-bottom: 10px;
       font-size: 18px; }
@@ -1746,7 +1863,7 @@ a {
     .course__content {
       flex-direction: column; }
     .course__heart {
-      margin-bottom: 35px;
+      margin-bottom: 80px;
       padding-top: 0;
       background-position: center;
       background-size: contain; }
@@ -1765,6 +1882,8 @@ a {
     padding: 35px 15px; }
   .heart-image__img:before {
     left: -80px; }
+  .problems:before, .problems:after {
+    display: none; }
   .problems__list div span {
     padding: 0; }
   .problems__list_two .problems__list-arrow {
@@ -1778,8 +1897,15 @@ a {
     padding: 270px 0 70px 0; }
     .steps-video {
       width: 100%; }
+    .steps:before, .steps:after {
+      display: none; }
   .program {
     padding: 50px 0; }
+  .program__lessons {
+    max-width: 100%;
+    margin: auto; }
+  .lesson:before {
+    display: none; }
   .about {
     padding: 140px 0 530px 0;
     background-image: url("../img/screen-5/about-bg-mobile.png");
@@ -1803,7 +1929,6 @@ a {
     background-position: 80% -280px;
     background-size: 460%; }
     .course .heart__content {
-      height: 300px;
       font-size: 32px; }
   .form {
     padding: 30px 40px 50px 40px; }
@@ -1821,3 +1946,36 @@ a {
     .form .btn {
       padding: 26px 70px;
       font-size: 13px; } }
+   
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeIn {
+  animation: fadeInDown 1s 0.2s both;
+  -webkit-animation: fadeInDown 1s 0.2s both;
+}
