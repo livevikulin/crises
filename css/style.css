@@ -1684,6 +1684,7 @@ a {
   .heart-image {
     order: -1;
     max-width: 300px;
+    max-height: 270px;
     margin-bottom: 34px; }
     .heart-image__text {
       top: -55px;
@@ -1888,7 +1889,8 @@ a {
     width: 100%;
     padding: 35px 15px; }
   .heart-image__img:before {
-    left: -80px; }
+    left: -80px;
+   }
   .problems:before, .problems:after {
     display: none; }
   .problems__list div span {
