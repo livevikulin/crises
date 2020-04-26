@@ -518,6 +518,9 @@ a {
 
 .parallax {
   display: flex; }
+.heart-image__img .parallax {
+  display: block;
+}
 
 .cloud-bg {
   background-image: url("../img/screen-1/background.jpg");
