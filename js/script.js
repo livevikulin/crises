@@ -15,8 +15,15 @@ $( document ).ready(function() {
         }     
     });
 
+    $('body').on('click', '[data-modal]', function(){
+        let modalName = $(this).data('modal');
+        $('.modal#' + modalName + '').addClass('open');
+        $('html').addClass('fixedBody');
+    })
+
     function closeModal(){
         $('.modal__close').parents('.modal').removeClass('open');
+        $('html').removeClass('fixedBody');
     }
 
     $('body').on('click', '.modal__close', function(){
